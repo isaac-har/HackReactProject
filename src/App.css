@@ -22,6 +22,7 @@
 .App-link {
   opacity: 0;
 }
+
 .Button {
   display: flex;
   text-align: center;
@@ -41,16 +42,49 @@
   line-height: 40px;
   font-weight: bold;
   font-size: 2.5vh;
-	background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
-	background-size: 800% 800%;
-	-webkit-background-clip: text;
-    background-clip:text;
-	-webkit-text-fill-color: transparent;
-	animation: rainbow 3s ease infinite;
+  background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 3s ease infinite;
+}
+
+.MoneyButton {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  font-size: 16px;
+  color: rgb(213, 30, 30);
+  top: 15%;
+  left: 85%;
+  transform: translate(-50%);
+  width: 200px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 4px black;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 2.5vh;
+  background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 3s ease infinite;
+}
+
+.InputBox {
+  opacity: 0;
+  position: absolute;
 }
 
 .App-header {
   background-color: #ffffff;
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -58,12 +92,12 @@
   justify-content: center;
   font-weight: bold;
   font-size: calc(20px + 2vmin);
-	background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
-	background-size: 800% 800%;
-	-webkit-background-clip: text;
-    background-clip:text;
-	-webkit-text-fill-color: transparent;
-	animation: rainbow 3s ease infinite;
+  background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 3s ease infinite;
 }
 
 .App-link {
@@ -74,15 +108,17 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 @keyframes rainbow {
-   0% {
+  0% {
     background-position: 0% 50%;
   }
+
   100% {
     background-position: 100% 50%;
   }
@@ -92,18 +128,23 @@
   0% {
     transform: scale(1);
   }
+
   20% {
     transform: scale(1.1);
   }
+
   40% {
     transform: scale(1.2);
   }
+
   60% {
     transform: scale(1.3);
   }
+
   80% {
     transform: scale(1.4);
   }
+
   100% {
     transform: scale(2);
     opacity: 0;
